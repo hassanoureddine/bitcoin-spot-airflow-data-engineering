@@ -1,8 +1,9 @@
 import config
 import pandas as pd
-
+import datetime
 from google.cloud import bigquery
 import os
+
 
 def _load_existing_tables(client):
     tables = client.list_tables(config.bq_dataset_id)
@@ -11,8 +12,11 @@ def _load_existing_tables(client):
         tables_ids.append(table.table_id)
     return tables_ids
 
-def _load_asks_data(client):
+
+def _load_asks_data(client, df, timestamp):
     asks_table_id = 'btcspot.btcspot.asks'
+
+    # if table 'asks' is not created --> create it
     if 'asks' not in _load_existing_tables(client):
         schema_asks = [
             bigquery.SchemaField("timestamp", "TIMESTAMP", mode="REQUIRED"),
@@ -25,31 +29,26 @@ def _load_asks_data(client):
             "Created table {}.{}.{}".format(table.project, table.dataset_id, table.table_id)
         )
 
-    input_files = [f for f in os.listdir('asks_data') if f.endswith(('.csv', '.CSV'))]
+    df['price'] = pd.to_numeric(df['price'])
+    df['size'] = pd.to_numeric(df['size'])
 
-    for file in input_files:
-        df = pd.read_csv('asks_data' + '/' + file)
-        df['price'] = pd.to_numeric(df['price'])
-        df['size'] = pd.to_numeric(df['size'])
-        timestamp = int(file[:10])
+    row_to_insert = []
+    for index, row in df.iterrows():
+        row_to_insert = row_to_insert + [
+            {u'timestamp': timestamp, u'price': row['price'], u'size': row['size']}
+        ]
 
-        row_to_insert = []
-        for index, row in df.iterrows():
-            row_to_insert = row_to_insert + [
-                {u'timestamp': timestamp, u'price': row['price'], u'size': row['size']}
-            ]
+    errors = client.insert_rows_json(asks_table_id, row_to_insert)
+    if errors == []:
+        print('New rows have been added to {}'.format(asks_table_id))
+    else:
+        print('Encountered errors while inserting rows: {errors}')
 
-        errors = client.insert_rows_json(asks_table_id, row_to_insert)
-        if errors == []:
-            print('New rows have been added to {}'.format(asks_table_id))
-        else:
-            print('Encountered errors while inserting rows: {errors}')
 
-        #for testing purposes
-        break
-
-def _load_bids_data(client):
+def _load_bids_data(client, df, timestamp):
     bids_table_id = 'btcspot.btcspot.bids'
+
+    # if table 'bids' is not created --> create it
     if 'bids' not in _load_existing_tables(client):
         schema_asks = [
             bigquery.SchemaField("timestamp", "TIMESTAMP", mode="REQUIRED"),
@@ -62,28 +61,21 @@ def _load_bids_data(client):
             "Created table {}.{}.{}".format(table.project, table.dataset_id, table.table_id)
         )
 
-    input_files = [f for f in os.listdir('bids_data') if f.endswith(('.csv', '.CSV'))]
+    df['price'] = pd.to_numeric(df['price'])
+    df['size'] = pd.to_numeric(df['size'])
 
-    for file in input_files:
-        df = pd.read_csv('bids_data' + '/' + file)
-        df['price'] = pd.to_numeric(df['price'])
-        df['size'] = pd.to_numeric(df['size'])
-        timestamp = int(file[:10])
+    row_to_insert = []
+    for index, row in df.iterrows():
+        row_to_insert = row_to_insert + [
+            {u'timestamp': timestamp, u'price': row['price'], u'size': row['size']}
+        ]
 
-        row_to_insert = []
-        for index, row in df.iterrows():
-            row_to_insert = row_to_insert + [
-                {u'timestamp': timestamp, u'price': row['price'], u'size': row['size']}
-            ]
+    errors = client.insert_rows_json(bids_table_id, row_to_insert)
+    if errors == []:
+        print('New rows have been added to {}'.format(bids_table_id))
+    else:
+        print('Encountered errors while inserting rows: {errors}')
 
-        errors = client.insert_rows_json(bids_table_id, row_to_insert)
-        if errors == []:
-            print('New rows have been added to {}'.format(bids_table_id))
-        else:
-            print('Encountered errors while inserting rows: {errors}')
-
-        #for testing purposes
-        break
 
 def _load_data(ti):
     credentials_path = '/opt/airflow/pythonbq-privateKey.json'
@@ -92,5 +84,14 @@ def _load_data(ti):
     client = bigquery.Client()
     data = ti.xcom_pull(key='collected_data', task_ids='collect_data_from_API')
 
-    #_load_asks_data(client)
-    #_load_bids_data(client)
+    for elt in data:
+        timestamp = datetime.datetime.strptime(elt['time_exchange'][:19], '%Y-%m-%dT%H:%M:%S').timestamp()
+
+        df_asks = pd.DataFrame(elt['asks'])
+        _load_asks_data(client, df_asks, timestamp)
+
+        df_bids = pd.DataFrame(elt['bids'])
+        _load_bids_data(client, df_bids, timestamp)
+
+        # for testing purposes
+        break
