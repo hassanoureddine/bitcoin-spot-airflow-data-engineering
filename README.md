@@ -12,7 +12,7 @@ Workflow tasks:
 * Setup [BigQuery](https://cloud.google.com/bigquery) and create Service Account
         
 ### Usage
-* Set CoinAPI API_KEY in config.py
+* Set CoinAPI API_KEY in [config.py](https://github.com/hsnnd/bitcoin-spot-airflow-data-engineering/blob/main/dags/config.py)
 * Replace pythonbq-privateKey.json file by your BigQuery private key
 * Run the web service with docker
     ```
@@ -21,6 +21,5 @@ Workflow tasks:
     # Build the image
     # docker-compose up -d --build
     ```
-
-Check http://localhost:8080/
+* Check http://localhost:8080/
 
