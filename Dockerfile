@@ -4,5 +4,3 @@ RUN pip install -r requirements.txt
 
 
 ADD pythonbq-privateKey.json .
-
-

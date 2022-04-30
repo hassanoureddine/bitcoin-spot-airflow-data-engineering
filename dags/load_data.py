@@ -1,8 +1,11 @@
 import config
+
+import os
 import pandas as pd
 import datetime
+
 from google.cloud import bigquery
-import os
+
 
 
 def _load_existing_tables(client):
@@ -14,7 +17,7 @@ def _load_existing_tables(client):
 
 
 def _load_asks_data(client, df, timestamp):
-    asks_table_id = 'btcspot.btcspot.asks'
+    asks_table_id = config.asks_table_id
 
     # if table 'asks' is not created --> create it
     if 'asks' not in _load_existing_tables(client):
@@ -46,7 +49,7 @@ def _load_asks_data(client, df, timestamp):
 
 
 def _load_bids_data(client, df, timestamp):
-    bids_table_id = 'btcspot.btcspot.bids'
+    bids_table_id = config.bids_table_id
 
     # if table 'bids' is not created --> create it
     if 'bids' not in _load_existing_tables(client):
@@ -78,8 +81,7 @@ def _load_bids_data(client, df, timestamp):
 
 
 def _load_data(ti):
-    credentials_path = '/opt/airflow/pythonbq-privateKey.json'
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_path
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = config.bg_credentials_path
 
     client = bigquery.Client()
     data = ti.xcom_pull(key='collected_data', task_ids='collect_data_from_API')
