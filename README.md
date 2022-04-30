@@ -23,6 +23,5 @@ Workflow tasks:
     # Build the image
     # docker-compose up -d --build
     ```
-* Check http://localhost:8080/
-* Then the [DAG](http://localhost:8080/graph?dag_id=btc_spot_data_dag)
+* Check http://localhost:8080/ then the [DAG](http://localhost:8080/graph?dag_id=btc_spot_data_dag) below
 <img align="center"  src="https://github.com/hsnnd/bitcoin-spot-airflow-data-engineering/blob/main/DAG.PNG">
