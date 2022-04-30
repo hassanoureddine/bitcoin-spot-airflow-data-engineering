@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7869375c-40fd-470a-8cc1-03a2caa3de0c" name="Default Changelist" comment="Add aggregations and result operators">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7869375c-40fd-470a-8cc1-03a2caa3de0c" name="Default Changelist" comment=".gitignore">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2022-04-30/add_gcp_connection.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2022-04-30/add_gcp_connection.py.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2022-04-30/my_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2022-04-30/my_dag.py.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2022-04-30/native_dags/example_dags/example_bash_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2022-04-30/native_dags/example_dags/example_bash_operator.py.log" afterDir="false" />
@@ -153,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651323543750</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=".gitignore">
+      <created>1651324144751</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651324144751</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,6 +178,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update the script to load data into BigQuery" />
     <MESSAGE value="Add aggregations and result operators" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add aggregations and result operators" />
+    <MESSAGE value=".gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
   </component>
 </project>

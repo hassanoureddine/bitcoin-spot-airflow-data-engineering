@@ -82,3 +82,24 @@
 [2022-04-30 13:08:54,161] {logging_mixin.py:109} INFO - [2022-04-30 13:08:54,160] {dag.py:2398} INFO - Sync 1 DAGs
 [2022-04-30 13:08:54,181] {logging_mixin.py:109} INFO - [2022-04-30 13:08:54,181] {dag.py:2937} INFO - Setting next_dagrun for example_xcom to 2021-01-01T00:00:00+00:00
 [2022-04-30 13:08:54,196] {processor.py:171} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py took 0.365 seconds
+[2022-04-30 13:09:24,254] {processor.py:163} INFO - Started process (PID=22586) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py
+[2022-04-30 13:09:24,256] {processor.py:642} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2022-04-30 13:09:24,257] {logging_mixin.py:109} INFO - [2022-04-30 13:09:24,257] {dagbag.py:500} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py
+[2022-04-30 13:09:24,293] {processor.py:652} INFO - DAG(s) dict_keys(['example_xcom']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py
+[2022-04-30 13:09:24,647] {logging_mixin.py:109} INFO - [2022-04-30 13:09:24,646] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-30 13:09:24,670] {logging_mixin.py:109} INFO - [2022-04-30 13:09:24,670] {dag.py:2937} INFO - Setting next_dagrun for example_xcom to 2021-01-01T00:00:00+00:00
+[2022-04-30 13:09:24,687] {processor.py:171} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py took 0.437 seconds
+[2022-04-30 13:09:55,492] {processor.py:163} INFO - Started process (PID=22652) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py
+[2022-04-30 13:09:55,493] {processor.py:642} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2022-04-30 13:09:55,494] {logging_mixin.py:109} INFO - [2022-04-30 13:09:55,494] {dagbag.py:500} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py
+[2022-04-30 13:09:55,519] {processor.py:652} INFO - DAG(s) dict_keys(['example_xcom']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py
+[2022-04-30 13:09:55,808] {logging_mixin.py:109} INFO - [2022-04-30 13:09:55,808] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-30 13:09:55,827] {logging_mixin.py:109} INFO - [2022-04-30 13:09:55,827] {dag.py:2937} INFO - Setting next_dagrun for example_xcom to 2021-01-01T00:00:00+00:00
+[2022-04-30 13:09:55,840] {processor.py:171} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py took 0.352 seconds
+[2022-04-30 13:10:26,537] {processor.py:163} INFO - Started process (PID=22716) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py
+[2022-04-30 13:10:26,539] {processor.py:642} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2022-04-30 13:10:26,540] {logging_mixin.py:109} INFO - [2022-04-30 13:10:26,540] {dagbag.py:500} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py
+[2022-04-30 13:10:26,566] {processor.py:652} INFO - DAG(s) dict_keys(['example_xcom']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py
+[2022-04-30 13:10:26,872] {logging_mixin.py:109} INFO - [2022-04-30 13:10:26,872] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-30 13:10:26,893] {logging_mixin.py:109} INFO - [2022-04-30 13:10:26,893] {dag.py:2937} INFO - Setting next_dagrun for example_xcom to 2021-01-01T00:00:00+00:00
+[2022-04-30 13:10:26,908] {processor.py:171} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_xcom.py took 0.375 seconds
