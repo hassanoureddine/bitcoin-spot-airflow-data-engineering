@@ -1,0 +1,1 @@
+select sum(bids.size), timestamp  from `btcspot.btcspot.bids` as bids group by timestamp;

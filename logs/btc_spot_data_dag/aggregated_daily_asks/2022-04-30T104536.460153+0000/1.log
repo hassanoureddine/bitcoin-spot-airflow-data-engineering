@@ -1,0 +1,26 @@
+[2022-04-30 10:45:48,782] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: btc_spot_data_dag.aggregated_daily_asks manual__2022-04-30T10:45:36.460153+00:00 [queued]>
+[2022-04-30 10:45:48,798] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: btc_spot_data_dag.aggregated_daily_asks manual__2022-04-30T10:45:36.460153+00:00 [queued]>
+[2022-04-30 10:45:48,799] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-30 10:45:48,800] {taskinstance.py:1250} INFO - Starting attempt 1 of 1
+[2022-04-30 10:45:48,800] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-30 10:45:48,817] {taskinstance.py:1270} INFO - Executing <Task(BigQueryOperator): aggregated_daily_asks> on 2022-04-30 10:45:36.460153+00:00
+[2022-04-30 10:45:48,823] {standard_task_runner.py:52} INFO - Started process 1297 to run task
+[2022-04-30 10:45:48,828] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'btc_spot_data_dag', 'aggregated_daily_asks', 'manual__2022-04-30T10:45:36.460153+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/tmp/tmpl6hh0eto', '--error-file', '/tmp/tmp38_ontfq']
+[2022-04-30 10:45:48,829] {standard_task_runner.py:80} INFO - Job 84: Subtask aggregated_daily_asks
+[2022-04-30 10:45:48,917] {logging_mixin.py:109} INFO - Running <TaskInstance: btc_spot_data_dag.aggregated_daily_asks manual__2022-04-30T10:45:36.460153+00:00 [running]> on host cf4e030da5d2
+[2022-04-30 10:45:48,996] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=btc_spot_data_dag
+AIRFLOW_CTX_TASK_ID=aggregated_daily_asks
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-30T10:45:36.460153+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-30T10:45:36.460153+00:00
+[2022-04-30 10:45:48,997] {bigquery.py:655} INFO - Executing: select sum(asks.size) from `btcspot.btcspot.asks` as asks group by timestamp;
+[2022-04-30 10:45:49,009] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/providers/google/cloud/hooks/bigquery.py:2058: DeprecationWarning: This method is deprecated. Please use `BigQueryHook.insert_job` method.
+  "This method is deprecated. Please use `BigQueryHook.insert_job` method.", DeprecationWarning
+
+[2022-04-30 10:45:49,019] {bigquery.py:1554} INFO - Inserting job ***_1651315549018315_ba2e71551f566f9fa19bb9927da7eb84
+[2022-04-30 10:45:51,734] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=btc_spot_data_dag, task_id=aggregated_daily_asks, execution_date=20220430T104536, start_date=20220430T104548, end_date=20220430T104551
+[2022-04-30 10:45:51,771] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-30 10:45:51,819] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

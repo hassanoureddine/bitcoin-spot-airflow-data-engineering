@@ -1,0 +1,54 @@
+[2022-04-30 10:35:50,359] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: btc_spot_data_dag.aggregated_daily_asks manual__2022-04-30T10:35:38.193599+00:00 [queued]>
+[2022-04-30 10:35:50,377] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: btc_spot_data_dag.aggregated_daily_asks manual__2022-04-30T10:35:38.193599+00:00 [queued]>
+[2022-04-30 10:35:50,377] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-30 10:35:50,378] {taskinstance.py:1250} INFO - Starting attempt 1 of 1
+[2022-04-30 10:35:50,378] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-30 10:35:50,396] {taskinstance.py:1270} INFO - Executing <Task(BigQueryOperator): aggregated_daily_asks> on 2022-04-30 10:35:38.193599+00:00
+[2022-04-30 10:35:50,402] {standard_task_runner.py:52} INFO - Started process 863 to run task
+[2022-04-30 10:35:50,408] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'btc_spot_data_dag', 'aggregated_daily_asks', 'manual__2022-04-30T10:35:38.193599+00:00', '--job-id', '69', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/tmp/tmp5eb4l2s3', '--error-file', '/tmp/tmp41oo1af9']
+[2022-04-30 10:35:50,410] {standard_task_runner.py:80} INFO - Job 69: Subtask aggregated_daily_asks
+[2022-04-30 10:35:50,510] {logging_mixin.py:109} INFO - Running <TaskInstance: btc_spot_data_dag.aggregated_daily_asks manual__2022-04-30T10:35:38.193599+00:00 [running]> on host cf4e030da5d2
+[2022-04-30 10:35:50,605] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=btc_spot_data_dag
+AIRFLOW_CTX_TASK_ID=aggregated_daily_asks
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-30T10:35:38.193599+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-30T10:35:38.193599+00:00
+[2022-04-30 10:35:50,606] {bigquery.py:655} INFO - Executing: select sum(asks.size) from `btcspot.btcspot.asks` as asks group by timestamp;
+[2022-04-30 10:35:50,620] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/providers/google/cloud/hooks/bigquery.py:2058: DeprecationWarning: This method is deprecated. Please use `BigQueryHook.insert_job` method.
+  "This method is deprecated. Please use `BigQueryHook.insert_job` method.", DeprecationWarning
+
+[2022-04-30 10:35:50,630] {bigquery.py:1554} INFO - Inserting job ***_1651314950629554_19c3d8fc9b09600e3814c41bd129c03b
+[2022-04-30 10:35:51,143] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 681, in execute
+    encryption_configuration=self.encryption_configuration,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 2192, in run_query
+    job = self.insert_job(configuration=configuration, project_id=self.project_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 439, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 1560, in insert_job
+    job.result(timeout=timeout, retry=retry)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1499, in result
+    do_get_result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1489, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 137, in result
+    raise self._exception
+google.api_core.exceptions.Conflict: 409 Already Exists: Table btcspot:btcspot.btcspot
+
+Location: US
+Job ID: airflow_1651314950629554_19c3d8fc9b09600e3814c41bd129c03b
+
+[2022-04-30 10:35:51,170] {taskinstance.py:1288} INFO - Marking task as FAILED. dag_id=btc_spot_data_dag, task_id=aggregated_daily_asks, execution_date=20220430T103538, start_date=20220430T103550, end_date=20220430T103551
+[2022-04-30 10:35:51,197] {standard_task_runner.py:98} ERROR - Failed to execute job 69 for task aggregated_daily_asks (409 Already Exists: Table btcspot:btcspot.btcspot
+
+Location: US
+Job ID: airflow_1651314950629554_19c3d8fc9b09600e3814c41bd129c03b
+; 863)
+[2022-04-30 10:35:51,223] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-30 10:35:51,279] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
