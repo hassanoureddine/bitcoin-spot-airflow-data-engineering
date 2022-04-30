@@ -8977,3 +8977,57 @@ TypeError: execute() missing 1 required positional argument: 'context'
 [2022-04-30 12:40:29,838] {logging_mixin.py:109} INFO - [2022-04-30 12:40:29,838] {dag.py:2398} INFO - Sync 1 DAGs
 [2022-04-30 12:40:29,861] {logging_mixin.py:109} INFO - [2022-04-30 12:40:29,860] {dag.py:2937} INFO - Setting next_dagrun for btc_spot_data_dag to 2022-04-30T00:00:00+00:00
 [2022-04-30 12:40:29,873] {processor.py:171} INFO - Processing /opt/airflow/dags/my_dag.py took 1.112 seconds
+[2022-04-30 12:40:59,976] {processor.py:163} INFO - Started process (PID=18967) to work on /opt/airflow/dags/my_dag.py
+[2022-04-30 12:40:59,978] {processor.py:642} INFO - Processing file /opt/airflow/dags/my_dag.py for tasks to queue
+[2022-04-30 12:40:59,980] {logging_mixin.py:109} INFO - [2022-04-30 12:40:59,980] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:41:01,103] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: The bigquery_conn_id parameter has been deprecated. You should pass the gcp_conn_id parameter.
+[2022-04-30 12:41:01,106] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: This operator is deprecated. Please use `BigQueryInsertJobOperator`.
+[2022-04-30 12:41:01,140] {processor.py:652} INFO - DAG(s) dict_keys(['btc_spot_data_dag']) retrieved from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:41:01,177] {logging_mixin.py:109} INFO - [2022-04-30 12:41:01,177] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-30 12:41:01,201] {logging_mixin.py:109} INFO - [2022-04-30 12:41:01,200] {dag.py:2937} INFO - Setting next_dagrun for btc_spot_data_dag to 2022-04-30T00:00:00+00:00
+[2022-04-30 12:41:01,215] {processor.py:171} INFO - Processing /opt/airflow/dags/my_dag.py took 1.244 seconds
+[2022-04-30 12:41:31,253] {processor.py:163} INFO - Started process (PID=19045) to work on /opt/airflow/dags/my_dag.py
+[2022-04-30 12:41:31,255] {processor.py:642} INFO - Processing file /opt/airflow/dags/my_dag.py for tasks to queue
+[2022-04-30 12:41:31,256] {logging_mixin.py:109} INFO - [2022-04-30 12:41:31,256] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:41:32,540] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: The bigquery_conn_id parameter has been deprecated. You should pass the gcp_conn_id parameter.
+[2022-04-30 12:41:32,542] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: This operator is deprecated. Please use `BigQueryInsertJobOperator`.
+[2022-04-30 12:41:32,575] {processor.py:652} INFO - DAG(s) dict_keys(['btc_spot_data_dag']) retrieved from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:41:32,606] {logging_mixin.py:109} INFO - [2022-04-30 12:41:32,605] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-30 12:41:32,633] {logging_mixin.py:109} INFO - [2022-04-30 12:41:32,633] {dag.py:2937} INFO - Setting next_dagrun for btc_spot_data_dag to 2022-04-30T00:00:00+00:00
+[2022-04-30 12:41:32,647] {processor.py:171} INFO - Processing /opt/airflow/dags/my_dag.py took 1.400 seconds
+[2022-04-30 12:42:02,797] {processor.py:163} INFO - Started process (PID=19111) to work on /opt/airflow/dags/my_dag.py
+[2022-04-30 12:42:02,799] {processor.py:642} INFO - Processing file /opt/airflow/dags/my_dag.py for tasks to queue
+[2022-04-30 12:42:02,801] {logging_mixin.py:109} INFO - [2022-04-30 12:42:02,801] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:42:03,943] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: The bigquery_conn_id parameter has been deprecated. You should pass the gcp_conn_id parameter.
+[2022-04-30 12:42:03,945] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: This operator is deprecated. Please use `BigQueryInsertJobOperator`.
+[2022-04-30 12:42:03,970] {processor.py:652} INFO - DAG(s) dict_keys(['btc_spot_data_dag']) retrieved from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:42:03,994] {logging_mixin.py:109} INFO - [2022-04-30 12:42:03,993] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-30 12:42:04,018] {logging_mixin.py:109} INFO - [2022-04-30 12:42:04,017] {dag.py:2937} INFO - Setting next_dagrun for btc_spot_data_dag to 2022-04-30T00:00:00+00:00
+[2022-04-30 12:42:04,039] {processor.py:171} INFO - Processing /opt/airflow/dags/my_dag.py took 1.247 seconds
+[2022-04-30 12:42:34,950] {processor.py:163} INFO - Started process (PID=19176) to work on /opt/airflow/dags/my_dag.py
+[2022-04-30 12:42:34,951] {processor.py:642} INFO - Processing file /opt/airflow/dags/my_dag.py for tasks to queue
+[2022-04-30 12:42:34,952] {logging_mixin.py:109} INFO - [2022-04-30 12:42:34,952] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:42:35,872] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: The bigquery_conn_id parameter has been deprecated. You should pass the gcp_conn_id parameter.
+[2022-04-30 12:42:35,874] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: This operator is deprecated. Please use `BigQueryInsertJobOperator`.
+[2022-04-30 12:42:35,900] {processor.py:652} INFO - DAG(s) dict_keys(['btc_spot_data_dag']) retrieved from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:42:35,921] {logging_mixin.py:109} INFO - [2022-04-30 12:42:35,921] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-30 12:42:35,942] {logging_mixin.py:109} INFO - [2022-04-30 12:42:35,941] {dag.py:2937} INFO - Setting next_dagrun for btc_spot_data_dag to 2022-04-30T00:00:00+00:00
+[2022-04-30 12:42:35,955] {processor.py:171} INFO - Processing /opt/airflow/dags/my_dag.py took 1.009 seconds
+[2022-04-30 12:43:06,390] {processor.py:163} INFO - Started process (PID=19251) to work on /opt/airflow/dags/my_dag.py
+[2022-04-30 12:43:06,391] {processor.py:642} INFO - Processing file /opt/airflow/dags/my_dag.py for tasks to queue
+[2022-04-30 12:43:06,392] {logging_mixin.py:109} INFO - [2022-04-30 12:43:06,392] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:43:07,478] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: The bigquery_conn_id parameter has been deprecated. You should pass the gcp_conn_id parameter.
+[2022-04-30 12:43:07,479] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: This operator is deprecated. Please use `BigQueryInsertJobOperator`.
+[2022-04-30 12:43:07,503] {processor.py:652} INFO - DAG(s) dict_keys(['btc_spot_data_dag']) retrieved from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:43:07,524] {logging_mixin.py:109} INFO - [2022-04-30 12:43:07,524] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-30 12:43:07,546] {logging_mixin.py:109} INFO - [2022-04-30 12:43:07,546] {dag.py:2937} INFO - Setting next_dagrun for btc_spot_data_dag to 2022-04-30T00:00:00+00:00
+[2022-04-30 12:43:07,557] {processor.py:171} INFO - Processing /opt/airflow/dags/my_dag.py took 1.172 seconds
+[2022-04-30 12:43:38,115] {processor.py:163} INFO - Started process (PID=19316) to work on /opt/airflow/dags/my_dag.py
+[2022-04-30 12:43:38,117] {processor.py:642} INFO - Processing file /opt/airflow/dags/my_dag.py for tasks to queue
+[2022-04-30 12:43:38,118] {logging_mixin.py:109} INFO - [2022-04-30 12:43:38,118] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:43:39,126] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: The bigquery_conn_id parameter has been deprecated. You should pass the gcp_conn_id parameter.
+[2022-04-30 12:43:39,128] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/contrib/operators/bigquery_operator.py:55 DeprecationWarning: This operator is deprecated. Please use `BigQueryInsertJobOperator`.
+[2022-04-30 12:43:39,157] {processor.py:652} INFO - DAG(s) dict_keys(['btc_spot_data_dag']) retrieved from /opt/airflow/dags/my_dag.py
+[2022-04-30 12:43:39,184] {logging_mixin.py:109} INFO - [2022-04-30 12:43:39,183] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-30 12:43:39,207] {logging_mixin.py:109} INFO - [2022-04-30 12:43:39,207] {dag.py:2937} INFO - Setting next_dagrun for btc_spot_data_dag to 2022-04-30T00:00:00+00:00
+[2022-04-30 12:43:39,228] {processor.py:171} INFO - Processing /opt/airflow/dags/my_dag.py took 1.118 seconds

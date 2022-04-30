@@ -4,6 +4,7 @@
 Workflow tasks: 
 - Collect bitcoin spot historical data source
 - Update Python script to load BigQuery tables 
+- 
 
 ### Prerequisite
 * Install [Docker](https://www.docker.com/)
