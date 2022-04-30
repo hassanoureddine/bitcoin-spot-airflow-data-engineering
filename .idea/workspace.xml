@@ -2,7 +2,105 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7869375c-40fd-470a-8cc1-03a2caa3de0c" name="Default Changelist" comment="Add aggregations and result operators">
-      <change beforePath="$PROJECT_DIR$/logs/scheduler/2022-04-30/add_gcp_connection.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2022-04-30/add_gcp_connection.py.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/bq_sql/aggregated_daily_asks.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dags/bq_sql/aggregated_daily_asks.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/bq_sql/aggregated_daily_bids.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dags/bq_sql/aggregated_daily_bids.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/collect_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/collect_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/load_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/load_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/my_dag.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/my_dag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T110401.434860+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T112208.521420+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T120104.681211+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T121613.508210+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T121720.229855+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T121759.382782+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T121858.244127+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T122129.073095+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T122305.907695+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T122416.471654+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T122840.743760+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T123257.310319+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection/2022-04-30T123407.654791+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection_python/2022-04-30T103222.493856+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection_python/2022-04-30T103410.201139+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection_python/2022-04-30T103538.193599+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection_python/2022-04-30T103702.067685+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection_python/2022-04-30T104308.743625+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection_python/2022-04-30T104536.460153+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/add_gcp_connection_python/2022-04-30T104750.623221+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-29T000000+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T075759.795342+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T080228.080777+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T080313.526205+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T081638.150201+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T081910.071355+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T082459.548173+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T082545.441001+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T084711.778492+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T103222.493856+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T103410.201139+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T103538.193599+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T103702.067685+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T104308.743625+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T104536.460153+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T104750.623221+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T110401.434860+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T112208.521420+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T120104.681211+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T121613.508210+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T121720.229855+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T121759.382782+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T121858.244127+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T122129.073095+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T122305.907695+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T122416.471654+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T122840.743760+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T123257.310319+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_asks/2022-04-30T123407.654791+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-29T000000+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T075759.795342+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T080228.080777+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T080313.526205+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T081638.150201+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T081910.071355+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T082459.548173+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T082545.441001+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T084711.778492+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T103222.493856+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T103410.201139+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T103538.193599+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T103702.067685+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T104308.743625+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T104536.460153+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T104750.623221+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T110401.434860+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T112208.521420+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T120104.681211+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T121613.508210+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T121720.229855+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T121759.382782+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T121858.244127+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T122129.073095+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T122305.907695+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T122416.471654+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T122840.743760+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T123257.310319+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/aggregated_daily_bids/2022-04-30T123407.654791+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T110401.434860+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T112208.521420+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T120104.681211+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T121613.508210+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T121720.229855+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T121759.382782+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T121858.244127+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T122129.073095+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T122305.907695+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T122416.471654+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T122840.743760+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T123257.310319+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/btc_spot_data_dag/results/2022-04-30T123407.654791+0000/1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scheduler/2022-04-30/add_gcp_connection.py.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2022-04-30/my_dag.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2022-04-30/my_dag.py.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2022-04-30/native_dags/example_dags/example_bash_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2022-04-30/native_dags/example_dags/example_bash_operator.py.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/2022-04-30/native_dags/example_dags/example_branch_datetime_operator.py.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/2022-04-30/native_dags/example_dags/example_branch_datetime_operator.py.log" afterDir="false" />
@@ -137,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651322650442</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add aggregations and result operators">
+      <created>1651323084679</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651323084679</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

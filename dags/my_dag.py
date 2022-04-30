@@ -15,7 +15,6 @@ from load_data import _load_data
 from add_gcp_connection import _add_gcp_connection
 from results import _calculate_results
 
-
 with DAG("btc_spot_data_dag", start_date=datetime(2021, 1, 1),
          schedule_interval="@daily", catchup=False) as dag:
     collect_data = PythonOperator(
@@ -40,7 +39,7 @@ with DAG("btc_spot_data_dag", start_date=datetime(2021, 1, 1),
         sql='bq_sql/aggregated_daily_asks.sql',
         bigquery_conn_id='btc_spot_conn_id',
         use_legacy_sql=False,
-        destination_dataset_table=config.bq_dataset_id+'.agg_asks',
+        destination_dataset_table=config.bq_dataset_id + '.agg_asks',
         write_disposition='WRITE_TRUNCATE',
         flatten_results=True,
     )
@@ -48,7 +47,7 @@ with DAG("btc_spot_data_dag", start_date=datetime(2021, 1, 1),
     aggregated_daily_bids = BigQueryOperator(
         task_id='aggregated_daily_bids',
         bigquery_conn_id='btc_spot_conn_id',
-        destination_dataset_table=config.bq_dataset_id+'.agg_bids',
+        destination_dataset_table=config.bq_dataset_id + '.agg_bids',
         write_disposition='WRITE_TRUNCATE',
         sql='bq_sql/aggregated_daily_bids.sql',
         use_legacy_sql=False,
@@ -61,4 +60,3 @@ with DAG("btc_spot_data_dag", start_date=datetime(2021, 1, 1),
     )
 
     collect_data >> load_data >> add_gcp_connection >> [aggregated_daily_asks, aggregated_daily_bids] >> results
-
