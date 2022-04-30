@@ -1,0 +1,5 @@
+[2022-04-30 13:03:17,350] {processor.py:163} INFO - Started process (PID=21786) to work on /opt/airflow/dags/add_gcp_connection.py
+[2022-04-30 13:03:17,352] {processor.py:642} INFO - Processing file /opt/airflow/dags/add_gcp_connection.py for tasks to queue
+[2022-04-30 13:03:17,353] {logging_mixin.py:109} INFO - [2022-04-30 13:03:17,353] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/add_gcp_connection.py
+[2022-04-30 13:03:17,375] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/add_gcp_connection.py
+[2022-04-30 13:03:17,396] {processor.py:171} INFO - Processing /opt/airflow/dags/add_gcp_connection.py took 0.050 seconds
